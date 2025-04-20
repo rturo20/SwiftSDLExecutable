@@ -1,0 +1,99 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "MySDLProject-aarch64-unknown-linux-gnu-debug.exe": ["<MySDLProject-aarch64-unknown-linux-gnu-debug.exe>"]
+  "MySDLProject-aarch64-unknown-linux-gnu-debug.module": ["<MySDLProject-aarch64-unknown-linux-gnu-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "SDLWrapper-aarch64-unknown-linux-gnu-debug.module": ["<SDLWrapper-aarch64-unknown-linux-gnu-debug.module>"]
+  "main": ["<MySDLProject-aarch64-unknown-linux-gnu-debug.exe>","<MySDLProject-aarch64-unknown-linux-gnu-debug.module>"]
+  "test": ["<MySDLProject-aarch64-unknown-linux-gnu-debug.exe>","<MySDLProject-aarch64-unknown-linux-gnu-debug.module>"]
+default: "main"
+nodes:
+  "/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/Sources/MySDLProject/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/MySDLProject.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules/MySDLProject.swiftmodule"]
+    outputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/MySDLProject.swiftmodule.o"]
+    description: "Wrapping AST for MySDLProject for debugging"
+    args: ["/usr/libexec/swift/6.0.3/usr/bin/swiftc","-modulewrap","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules/MySDLProject.swiftmodule","-o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/MySDLProject.swiftmodule.o","-target","aarch64-unknown-linux-gnu"]
+
+  "/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/Sources/MySDLProject/Ball.swift","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/Sources/MySDLProject/main.swift"]
+    outputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/sources"]
+    description: "Write auxiliary file /home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/sources"
+
+  "/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/Ball.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/MySDLProject.swiftmodule.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/main.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLEvent.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLWrapper.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLWrapper.swiftmodule.o"]
+    outputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.product/Objects.LinkFileList"
+
+  "/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLWrapper.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules/SDLWrapper.swiftmodule"]
+    outputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLWrapper.swiftmodule.o"]
+    description: "Wrapping AST for SDLWrapper for debugging"
+    args: ["/usr/libexec/swift/6.0.3/usr/bin/swiftc","-modulewrap","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules/SDLWrapper.swiftmodule","-o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLWrapper.swiftmodule.o","-target","aarch64-unknown-linux-gnu"]
+
+  "/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/checkouts/SwiftSDLWrapper/Sources/SDLWrapper/SDLEvent.swift","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/checkouts/SwiftSDLWrapper/Sources/SDLWrapper/SDLWrapper.swift"]
+    outputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/sources"]
+    description: "Write auxiliary file /home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/sources"
+
+  "/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/swift-version--6316934A684ED95.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/usr/libexec/swift/6.0.3/usr/bin/swiftc"]
+    outputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/swift-version--6316934A684ED95.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/swift-version--6316934A684ED95.txt"
+
+  "<MySDLProject-aarch64-unknown-linux-gnu-debug.exe>":
+    tool: phony
+    inputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject"]
+    outputs: ["<MySDLProject-aarch64-unknown-linux-gnu-debug.exe>"]
+
+  "<MySDLProject-aarch64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/Ball.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/main.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules/MySDLProject.swiftmodule"]
+    outputs: ["<MySDLProject-aarch64-unknown-linux-gnu-debug.module>"]
+
+  "<SDLWrapper-aarch64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLEvent.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLWrapper.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules/SDLWrapper.swiftmodule"]
+    outputs: ["<SDLWrapper-aarch64-unknown-linux-gnu-debug.module>"]
+
+  "C.MySDLProject-aarch64-unknown-linux-gnu-debug.exe":
+    tool: shell
+    inputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/Ball.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/MySDLProject.swiftmodule.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/main.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLEvent.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLWrapper.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLWrapper.swiftmodule.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.product/Objects.LinkFileList"]
+    outputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject"]
+    description: "Linking ./.build/aarch64-unknown-linux-gnu/debug/MySDLProject"
+    args: ["/usr/libexec/swift/6.0.3/usr/bin/swiftc","-L/usr/lib/aarch64-linux-gnu","-lSDL2","-L","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug","-o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject","-module-name","MySDLProject","-emit-executable","-Xlinker","--defsym","-Xlinker","main=MySDLProject_main","-Xlinker","-rpath=$ORIGIN","@/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.product/Objects.LinkFileList","-target","aarch64-unknown-linux-gnu","-g"]
+
+  "C.MySDLProject-aarch64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/Sources/MySDLProject/Ball.swift","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/Sources/MySDLProject/main.swift","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/swift-version--6316934A684ED95.txt","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules/SDLWrapper.swiftmodule","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/sources"]
+    outputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/Ball.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/main.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules/MySDLProject.swiftmodule"]
+    description: "Compiling Swift Module 'MySDLProject' (2 sources)"
+    args: ["/usr/libexec/swift/6.0.3/usr/bin/swiftc","-module-name","MySDLProject","-emit-dependencies","-emit-module","-emit-module-path","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules/MySDLProject.swiftmodule","-output-file-map","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/output-file-map.json","-incremental","-c","@/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/MySDLProject.build/sources","-I","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules","-target","aarch64-unknown-linux-gnu","-enable-batch-mode","-index-store-path","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j4","-DSWIFT_PACKAGE","-DDEBUG","-Xcc","-fmodule-map-file=/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/checkouts/SwiftSDLWrapper/Sources/CSDL2/module.modulemap","-I/usr/include/SDL2","-module-cache-path","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","MySDLProject_main","-color-diagnostics","-swift-version","5","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.SDLWrapper-aarch64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/checkouts/SwiftSDLWrapper/Sources/SDLWrapper/SDLEvent.swift","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/checkouts/SwiftSDLWrapper/Sources/SDLWrapper/SDLWrapper.swift","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/swift-version--6316934A684ED95.txt","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/sources"]
+    outputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLEvent.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/SDLWrapper.swift.o","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules/SDLWrapper.swiftmodule"]
+    description: "Compiling Swift Module 'SDLWrapper' (2 sources)"
+    args: ["/usr/libexec/swift/6.0.3/usr/bin/swiftc","-module-name","SDLWrapper","-emit-dependencies","-emit-module","-emit-module-path","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules/SDLWrapper.swiftmodule","-output-file-map","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/SDLWrapper.build/sources","-I","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/Modules","-target","aarch64-unknown-linux-gnu","-enable-batch-mode","-index-store-path","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j4","-DSWIFT_PACKAGE","-DDEBUG","-Xcc","-fmodule-map-file=/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/checkouts/SwiftSDLWrapper/Sources/CSDL2/module.modulemap","-I/usr/include/SDL2","-module-cache-path","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/.build/aarch64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-swift-version","5","-g","-Xcc","-fPIC","-Xcc","-g","-suppress-warnings","-Xcc","-fno-omit-frame-pointer"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/Sources/MySDLProject/","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/Package.swift","/home/rturo32/Coding/swift/CursorAI/DL_SwiftSDLFinalPrototype/swift/MyDirectSDLProjectMultiBall/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

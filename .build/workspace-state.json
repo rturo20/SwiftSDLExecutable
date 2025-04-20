@@ -1,0 +1,27 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swiftsdlwrapper",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/rturo20/SwiftSDLWrapper.git",
+          "name" : "SwiftSDLWrapper"
+        },
+        "state" : {
+          "checkoutState" : {
+            "branch" : "main",
+            "revision" : "954484599aa259efa99fccd79b5bcdd6429c5f37"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "SwiftSDLWrapper"
+      }
+    ]
+  },
+  "version" : 6
+}

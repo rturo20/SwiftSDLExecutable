@@ -7,12 +7,12 @@ let package = Package(
         .executable(name: "MySDLProject", targets: ["MySDLProject"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/rturo20/SwiftSDLWrapper.git", branch: "main")
+        .package(url: "https://github.com/rturo20/SwiftSDL.git", from: "1.0.0")
     ],
     targets: [
         .executableTarget(
             name: "MySDLProject",
-            dependencies: ["SwiftSDLWrapper"]
+            dependencies: ["SwiftSDL"]
         )
     ]
 )
